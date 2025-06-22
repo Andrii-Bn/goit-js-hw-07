@@ -3,6 +3,10 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
+  const info = {
+    email: elements.email.value,
+    password: elements.password.value,
+  };
 
   const elements = event.target.elements;
   if (
@@ -14,8 +18,4 @@ function handleSubmit(event) {
     console.log(info);
     event.target.reset();
   }
-  const info = {
-    email: elements.email.value,
-    password: elements.password.value,
-  };
 }
